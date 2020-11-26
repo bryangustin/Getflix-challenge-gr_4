@@ -1,51 +1,4 @@
 
-#container{
-	background-image: url("../images/david1.jpg");
-	height: 820px;
-	background-size:cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-}
-header{
-	float: left;
-	font-size: 19px;
-	color:white;
-	padding: 30px;
-	text-transform: uppercase;
-
-}
-#signature{
-	background-image: url("../images/signature-david.png");
-	background-size: 116%;
-	background-position: 41% 2%;
-	width: 900px;
-	height: 250px;
-	position: relative;
-	top: 350px;
-	right: -265px;
-}
-nav{
-	display: flex;
-	justify-content: flex-end;
-}
-#ul_header{
-	display: flex;
-	margin:0;
-}
-#li_header{
-	list-style-type: none;
-	padding: 30px;
-}
-.a_header{	
-	font-size: 19px;
-	color:white;
-	text-decoration: none;
-
-}
-.a_header:hover{
-	color: lightgrey;
-}
-
 /*
 Palette de couleurs
 Black pearl : #1e272e
@@ -66,32 +19,9 @@ body {
 	background: rgb(15,66,43);
 	background: linear-gradient(270deg, rgba(15,66,43,1) 0%, rgba(30,39,46,1) 60%);
 	color: #d2dae2;
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-top: 100px;
-	padding-top: 50px;
 	font-family: 'Montserrat', sans-serif;
 }
 
-header {
-	padding-bottom: 50px;
-}
-
-h1 {
-	color: #0be881;
-	text-align: center;
-	font-family: 'Bebas Neue', cursive;
-	font-size: 80px !important;
-	letter-spacing: 10px;
-}
-
-h2 {
-	color: #00d8d6;
-	text-align: center;
-	font-family: 'Bebas Neue', cursive;
-	font-size: 45px;
-	letter-spacing: 3px;
-}
 
 h3 {
 	background: rgb(15,66,43);
@@ -102,6 +32,73 @@ h3 {
 	font-size: 35px;
 	letter-spacing: 2px;
 }
+
+section {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+/*HEADER*/
+
+#container{
+	background-image: url("../images/david1.jpg");
+	height: 820px;
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-bottom: 100px;
+}
+
+header{
+	float: left;
+	font-size: 25px;
+	color:white;
+	padding: 30px;
+	text-transform: uppercase;
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 3px;
+}
+
+#signature{
+	background-image: url("../images/signature-david.png");
+	background-size: 116%;
+	background-position: 41% 2%;
+	width: 900px;
+	height: 250px;
+	position: relative;
+	top: 350px;
+	right: -265px;
+}
+
+nav{
+	display: flex;
+	justify-content: flex-end;
+	font-family: 'Bebas Neue', cursive;
+	letter-spacing: 3px;
+}
+#ul_header{
+	display: flex;
+	margin:0;
+}
+
+#li_header{
+	list-style-type: none;
+	padding: 30px;
+}
+
+.a_header{	
+	font-size: 19px;
+	color:white;
+	text-decoration: none;
+
+}
+
+.a_header:hover{
+	color: lightgrey;
+}
+
+/*FIN HEADER*/
+
 
 /* CAROUSSEL à la NETFLIX*/
 
