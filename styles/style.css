@@ -1,0 +1,36 @@
+#container{
+	background-image: url("../images/david1.jpg");
+	height: 820px;
+	background-size:cover;
+	background-repeat: no-repeat; 
+}
+#header{
+	background-image: url("../images/signature-david.png");
+	background-size: 116%;
+	background-position: 41% 2%;
+	width: 900px;
+	height: 250px;
+	position: relative;
+	top: 350px;
+	right: -265px;
+}
+nav{
+	display: flex;
+	justify-content: flex-end;
+}
+#ul_header{
+	display: flex;
+}
+#li_header{
+	list-style-type: none;
+	padding: 20px;
+}
+.a_header{	
+	font-size: 19px;
+	color:white;
+	text-decoration: none;
+
+}
+.a_header:hover{
+	color: lightgrey;
+}
