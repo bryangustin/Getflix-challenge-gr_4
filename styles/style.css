@@ -2,9 +2,18 @@
 	background-image: url("../images/david1.jpg");
 	height: 820px;
 	background-size:cover;
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
-#header{
+header{
+	float: left;
+	font-size: 19px;
+	color:white;
+	padding: 30px;
+	text-transform: uppercase;
+
+}
+#signature{
 	background-image: url("../images/signature-david.png");
 	background-size: 116%;
 	background-position: 41% 2%;
@@ -20,10 +29,11 @@ nav{
 }
 #ul_header{
 	display: flex;
+	margin:0;
 }
 #li_header{
 	list-style-type: none;
-	padding: 20px;
+	padding: 30px;
 }
 .a_header{	
 	font-size: 19px;
