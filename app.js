@@ -6,7 +6,6 @@ const button = document.querySelector("#btn");
 button.addEventListener("click",function(event){
 	event.preventDefault();
 	showPopup();
-	console.log(event);
 })
 function showPopup(){
 	// document.getElementById("popup-login").style.visibility = 'visible';
