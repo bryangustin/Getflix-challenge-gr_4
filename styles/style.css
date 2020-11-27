@@ -11,7 +11,132 @@ Texte normal: Montserrat
 Titre: Bebas Neue
 */
 
+/* LOGIN FORM  */
+.login-popup{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background-color: rgba(0,0,0,0.7);
+	visibility: hidden;
+	opacity: 0;
+	transition: all 1s ease;
+}
+.login-popup.show{
+	visibility: visible;
+	opacity: 1;
+}
+.login-popup .box{
+	background-color: #FFFFFF;
+	width: 750px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-wrap: wrap;
+	opacity: 0;
+	margin-left: 50px;
+	transition: all 1s ease;
+}
+.login-popup.show .box{
+	opacity: 1;
+	margin-left: 0;
+}
+.login-popup .box .img-area{
+	flex:0 0 50%;
+	max-width: 50%;
+	position: relative;
+	overflow: hidden;
+	padding: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.login-popup .box .img-area h1{
+	font-size: 30px;
 
+}
+.login-popup .box .img-area #your-logo{
+	background-image: url("../images/life-report_2.png");
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+}
+
+.login-popup .box .img-area .img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/clouds-1835815_1920.jpg");
+	background-size: cover;
+	background-position: center;
+	animation: zoomInOut 20s linear infinite;
+	z-index: -1;
+}
+@keyframes zoomInOut{
+	0%,100%{
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.1);
+	}
+}
+.login-popup .box .form{
+	flex:0 0 50%;
+	max-width: 50%;
+	padding:40px 30px;
+
+}
+.login-popup .box .form .close{
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	font-size: 30px;
+	cursor: pointer;
+}
+.login-popup .box .form h1{
+	color: grey;
+	font-size: 30px;
+	margin:0 0 30px;
+}
+.login-popup .box .form .form-control{
+	height: 45px;
+	margin-bottom: 30px;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #cccccc;
+	font-size: 15px;
+	color: grey;
+
+}
+.login-popup .box .form .form-control:focus{
+	outline: none;
+}
+.login-popup .box .form label{
+	font-size: 15px;
+	color: grey;
+}
+.login-popup .box .form .btn{
+	width: 100%;
+	height: 45px;
+	border: none;
+	border-radius: 25px;
+	background-color: #E91E63;
+	margin-top:40px;
+	font-size: 15px;
+	color: #ffffff;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.login-popup .box .form .btn:focus{
+	outline: none;
+}
+/* end of log in form */
 
 /*CSS de base ici*/
 
