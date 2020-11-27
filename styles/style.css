@@ -19,7 +19,7 @@ body {
 	background: rgb(15,66,43);
 	background: linear-gradient(270deg, rgba(15,66,43,1) 0%, rgba(30,39,46,1) 60%);
 	color: #d2dae2;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Mallanna', sans-serif;
 }
 
 
@@ -28,7 +28,7 @@ h3 {
 	background: linear-gradient(270deg, rgba(15,66,43,1) 0%, rgba(30,39,46,1) 60%);
 	color: #0be881;
 	padding-left: 50px;
-	font-family: 'Bebas Neue', cursive;
+
 	font-size: 35px;
 	letter-spacing: 2px;
 }
@@ -43,24 +43,26 @@ section {
 #container{
 	background-image: url("../images/david1.jpg");
 	height: 820px;
-	background-size:cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	margin-bottom: 100px;
+	background-size: 100%;
+	background-position: 0% -13%;
 }
 #logo{
 	position: fixed;
 	float: left;
-	background-image: url("../images/lifereport.png");
+	background-image: url("../images/life-report_2.png");
 	width: 200px;
 	height: 200px;
-	margin-top: -34px;
-	margin-left: -33px;
-	background-size: 100%;
-	background-position: 20% 20%;
+	margin-top: -42px;
+	margin-left: -41px;
+	background-size: 58%;
+	background-position: 54% 31%;
 	background-repeat: no-repeat;
 	z-index: 999;
 }
+
+
 
 #signature{
 	background-image: url("../images/signature-david.png");
@@ -74,15 +76,13 @@ section {
 }
 
 nav{
-	background: linear-gradient(90deg, rgba(255,255,255,0.01) 45%, rgba(207,207,207,0.4) 100%);
+	background: rgb(25,25,26);
 	width: 100%;							
 	position: fixed;
-	right: 0;
 	display: flex;
 	justify-content: flex-end;
-	font-family: 'Bebas Neue', cursive;
-	letter-spacing: 3px;
-	z-index: 999;
+	letter-spacing: 2px;
+	z-index: 998;
 }
 #ul_header{
 	display: flex;
@@ -95,14 +95,16 @@ nav{
 }
 
 .a_header{	
-	font-size: 19px;
+	font-size: 13px;
 	color:white;
 	text-decoration: none;
+	text-transform: uppercase;
 
 }
 
 .a_header:hover{
-	color: lightgrey;
+	color: grey;
+	text-decoration: none;
 }
 
 /*FIN HEADER*/
