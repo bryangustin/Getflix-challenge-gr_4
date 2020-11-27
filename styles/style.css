@@ -48,15 +48,18 @@ section {
 	background-attachment: fixed;
 	margin-bottom: 100px;
 }
-
-header{
+#logo{
+	position: fixed;
 	float: left;
-	font-size: 25px;
-	color:white;
-	padding: 30px;
-	text-transform: uppercase;
-	font-family: 'Bebas Neue', cursive;
-	letter-spacing: 3px;
+	background-image: url("../images/lifereport.png");
+	width: 200px;
+	height: 200px;
+	margin-top: -34px;
+	margin-left: -33px;
+	background-size: 100%;
+	background-position: 20% 20%;
+	background-repeat: no-repeat;
+	z-index: 999;
 }
 
 #signature{
@@ -71,10 +74,15 @@ header{
 }
 
 nav{
+	background: linear-gradient(90deg, rgba(255,255,255,0.01) 45%, rgba(207,207,207,0.4) 100%);
+	width: 100%;							
+	position: fixed;
+	right: 0;
 	display: flex;
 	justify-content: flex-end;
 	font-family: 'Bebas Neue', cursive;
 	letter-spacing: 3px;
+	z-index: 999;
 }
 #ul_header{
 	display: flex;
@@ -83,7 +91,7 @@ nav{
 
 #li_header{
 	list-style-type: none;
-	padding: 30px;
+	padding: 20px;
 }
 
 .a_header{	
@@ -150,11 +158,6 @@ nav{
 	bottom: 0;
 	right: 0;
 	background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-}
-
-img {
-	border-radius: 3%;
-	box-shadow: 0px 5px 5px #060809;
 }
 
 /*FIN DU CARROUSSEL NETFLIX*/
