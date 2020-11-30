@@ -14,6 +14,18 @@ Gris (comme du blanc) pour text de base: #d2dae2
 	border: none;
 	outline: none;
 }
+.srchbtn{
+	border: none;
+	background: none;
+	color: white;
+	outline: none;
+}
+.srchbtn:focus{
+	outline: none;
+}
+.srchbtn:hover{
+	color: grey;
+}
 /*Search bar end*/
 
 /* LOGIN FORM  */
