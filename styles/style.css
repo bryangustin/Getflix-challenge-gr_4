@@ -26,7 +26,50 @@ Gris (comme du blanc) pour text de base: #d2dae2
 .srchbtn:hover{
 	color: grey;
 }
-/* START LOG IN */
+/* LOGIN FORM  */
+.login-popup{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease;
+}
+.login-popup.show{
+    visibility: visible;
+    opacity: 1;
+}
+.login-popup .box{
+    background-color: #FFFFFF;
+    width: 750px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    margin-left: 50px;
+    transition: all 1s ease;
+}
+.login-popup.show .box{
+    opacity: 1;
+    margin-left: 0;
+}
+.login-popup .box .img-area{
+    flex:0 0 50%;
+    max-width: 50%;
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .login-popup .box .img-area h1{
 	font-size: 30px;
 }
