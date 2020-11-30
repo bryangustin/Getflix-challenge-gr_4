@@ -9,7 +9,7 @@ Gris (comme du blanc) pour text de base: #d2dae2
 /*Search bar start*/
 .search{
 	width: 150px;
-	height: 30px;
+	height: 20px;
 	border-radius: 25px;
 	border: none;
 	outline: none;
@@ -382,7 +382,6 @@ section {
 }
 .solid-nav #navbar{
 	background: linear-gradient(270deg, rgba(15,66,43,1) 0%, rgba(30,39,46,1) 60%);
-	
 }
 #navbar{
 	background: linear-gradient(270deg, rgba(15,66,43,0) 0%, rgba(30,39,46,0) 60%);
@@ -393,9 +392,19 @@ section {
 	letter-spacing: 2px;
 	z-index: 9;
 }
+#ul_header_nav{
+	width: 100%;
+	display: flex;
+	margin: 0;
+}
+.first{
+	margin-left: 80px;
+}
 #ul_header{
 	display: flex;
+	justify-content: flex-end;
 	margin:0;
+	width: 100%;
 }
 
 .li_header{
@@ -404,7 +413,7 @@ section {
 }
 
 .a_header{	
-	font-size: 13px;
+	font-size: 14px;
 	color:white;
 	text-decoration: none;
 	text-transform: uppercase;
