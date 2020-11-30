@@ -6,51 +6,27 @@ Minty green: #0be881
 Jade dust (bleu): #00d8d6
 Gris (comme du blanc) pour text de base: #d2dae2
 */
-
-/* LOGIN FORM  */
-.login-popup{
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 999;
-	background-color: rgba(0,0,0,0.7);
-	visibility: hidden;
-	opacity: 0;
-	transition: all 1s ease;
+/*Search bar start*/
+.search{
+	width: 150px;
+	height: 30px;
+	border-radius: 25px;
+	border: none;
+	outline: none;
 }
-.login-popup.show{
-	visibility: visible;
-	opacity: 1;
+.srchbtn{
+	border: none;
+	background: none;
+	color: white;
+	outline: none;
 }
-.login-popup .box{
-	background-color: #FFFFFF;
-	width: 750px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	display: flex;
-	flex-wrap: wrap;
-	opacity: 0;
-	margin-left: 50px;
-	transition: all 1s ease;
+.srchbtn:focus{
+	outline: none;
 }
-.login-popup.show .box{
-	opacity: 1;
-	margin-left: 0;
+.srchbtn:hover{
+	color: grey;
 }
-.login-popup .box .img-area{
-	flex:0 0 50%;
-	max-width: 50%;
-	position: relative;
-	overflow: hidden;
-	padding: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+/* START LOG IN */
 .login-popup .box .img-area h1{
 	font-size: 30px;
 }
@@ -195,8 +171,6 @@ Gris (comme du blanc) pour text de base: #d2dae2
 }
 .signup-popup .box .img-area h1{
 	font-size: 30px;
-
-
 }
 .signup-popup .box .img-area #your-logo{
 	background-image: url("../images/life-report_2.png");
