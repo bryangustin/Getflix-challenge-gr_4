@@ -26,8 +26,6 @@ buttonSignup.addEventListener("click",function(event){
 	showPopupSignup();
 })
 function showPopupSignup(){
-	// document.getElementById("popup-login").style.visibility = 'visible';
-	// document.getElementById("popup-login").style.opacity = '1';
 	signupPopup.classList.add("showsignup");
 	loginPopup.classList.remove("show");
 }
@@ -44,8 +42,6 @@ buttonpassword.addEventListener("click",function(event){
 	showPopuppassword();
 })
 function showPopuppassword(){
-	// document.getElementById("popup-login").style.visibility = 'visible';
-	// document.getElementById("popup-login").style.opacity = '1';
 	loginPopup.classList.remove("show");
 	passwordPopup.classList.add("show-password");
 	
