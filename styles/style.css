@@ -106,6 +106,8 @@ Gris (comme du blanc) pour text de base: #d2dae2
 
 }
 .login-popup .box .form .close{
+	opacity: 1;
+	color: grey;
 	position: absolute;
 	right: 10px;
 	top: 0px;
@@ -256,6 +258,8 @@ Gris (comme du blanc) pour text de base: #d2dae2
 
 }
 .signup-popup .box .form .closesignup{
+	opacity: 1;
+	color: grey;
 	position: absolute;
 	right: 10px;
 	top: 0px;
@@ -395,6 +399,8 @@ Gris (comme du blanc) pour text de base: #d2dae2
 
 }
 .password-popup .box .form .close-password{
+	opacity: 1;
+	color: grey;
 	position: absolute;
 	right: 10px;
 	top: 0px;
