@@ -63,7 +63,7 @@ function showPopupback(){
 $(document).ready(function() {
     $(window).scroll(function() {
         let scrollTop = $(window).scrollTop();
-        if (scrollTop > 755) {
+        if (scrollTop > 255) {
            document.getElementById('container').classList.add('solid-nav');
            // document.getElementById('opacity').classList.add('opacity');
         } else {
