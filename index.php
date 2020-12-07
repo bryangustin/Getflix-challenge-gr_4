@@ -1,3 +1,10 @@
+<?php session_start();
+	if (isset($_GET['disconnect'])){
+		unset($_GET);
+		session_destroy();
+		header('location: index.php');
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +24,7 @@
 </head>
 
 <body>
+	
 	 <!-- Login form -->
 	 <div class="login-popup">
         <div class="box">
@@ -27,24 +35,25 @@
             <div class="form">
                 <div class="close">&times;</div>
                 <h1>Log In</h1>
-                <form>
+                <form action="back.php" method="post">
                     <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
+                        <input type="text" name="email-login" placeholder="Email" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
+                        <input type="password" name="password-login" placeholder="Password" class="form-control">
                         <button type="button" id="btnpass">Forgot Password?</button>
                     </div>
                     <div class="form-group">
                         <label><input type="checkbox"> Remember me</label>
                     </div>
-                    <button type="button" class="btn">Log In</button>
+                    <button type="submit" class="btn">Log In</button>
                     <hr>
                     <button type="button" class="btn_create">Create an account</button>
                 </form>
             </div>
         </div>
     </div> 
+    
     <!-- SignUp form -->
 	<div class="signup-popup">
         <div class="box">
@@ -55,19 +64,24 @@
             <div class="form">
                 <div class="closesignup">&times;</div>
                 <h1>Sign Up</h1>
-                <form>
+                <form action="back.php" method="post">
                     <div class="form-group">
-                        <input type="text" placeholder="Email" class="form-control">
+                        <input type="text" name="email" placeholder="Email" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="Password" class="form-control">
+                        <input type="password" name="password-1" placeholder="Password" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <input type="password" placeholder="Password confirmation" class="form-control">
+                        <input type="password" name="password-2" placeholder="Password confirmation" class="form-control" required>
+                        <!-- Affichage des erreurs en dessous du password2 -->
+                        <?php if(isset($_SESSION['errors'])) : ?>
+                        	<?php foreach ($_SESSION['errors'] as $value): ?> 
+                        		<p style="color: red;"> <?php echo $value; ?> </p>
+                        	<?php endforeach ?> 
+                        <?php endif ?>
                     </div>
-                    <button type="button" class="btn-create-signup">Sign Up</button>
-                    <hr>
-                    <button type="button" id="btnback">Log In</button>
+                    <button type="submit" class="btn-create-signup" >Sign Up</button>
+                    	
                 </form>
             </div>
         </div>
@@ -104,14 +118,22 @@
 					<li class="li_header"><a class="a_header" href="">Contact</a></li>
 				</ul>
 				<ul id="ul_header">
-					<li class="li_header"><button class="srchbtn" type="submit"><i class="fa fa-search"></i></button> <input class="search" type="text" placeholder=" Search.."></li>
-					<li class="li_header"><a class="a_header" id="btn" href="">Log in</a></li>		
+						<li class="li_header"><button class="srchbtn" type="submit"><i class="fa fa-search"></i></button> <input class="search" type="text" placeholder=" Search.."></li>
+						<!-- Affichage login ou logout -->
+						<?php if(!isset($_SESSION['connected'])) :?>
+							<li class="li_header"><a class="a_header" id="btn" href="">
+							Log in
+						<?php else : ?>
+							<li class="li_header"><a class="a_header" href="index.php?disconnect=true">
+							Log out
+						<?php endif ?>
+					</a></li>		
 				</ul>
 			</nav>
 		<div id="signature"></div>
 		<!-- BIOGRAPHY -->
-		<!--
-		<section id="biography">
+		
+		<!-- <section id="biography">
 			<h1>Biography</h1>
 			<h2>Who is David Attenborough?</h2>
 			<p>David Attenborough was born in London, England in 1926. After studying natural sciences at the University of Cambridge, he began his career as a producer at the BBC, where he successfully launched the Zoo Quest series. Attenborough was appointed BBC Two controller in 1965, then director of programming. During his tenure, the station switched to color television and Attenborough played a decisive role in expanding its natural history content. Attenborough left the BBC to start writing and producing various series, including the hit Life on Earth, which set the standards for documentary on modern nature. Since then, Attenborough has written, produced, hosted and narrated countless award-winning nature-oriented programs and has devoted its life to celebrating and preserving wildlife.</p>
@@ -141,9 +163,13 @@
 			During his career, David Attenborough has received many honours. He was knighted in 1985, received the Queen Elizabeth Order of Merit in 2002 and holds at least 31 honorary doctorates from British universities, including Oxford and Cambridge. He published his biography, Life on Air, in 2002, and in 2012 was the subject of the BBC documentary Attenborough: 60 Years in the Wild. In 2014, a poll revealed that he was considered the most trustworthy public figure in Great Britain. Attenborough is also the most visited person in human history and the oldest to have ever visited the North Pole. But in the most appropriate tribute of all, several species of plants, insects and birds have been honoured by the name of Attenborough, ensuring that he will live alongside the many creatures he has spent his life celebrating and protecting.</p>
 			
 		</section>
-		</div> -->
+		</div>  -->
 	</header>
 	<!--Caroussel 1: catégorie documentaries-->
+	<!-- Affichage si logger -->
+	<?php
+		if(isset($_SESSION['connected'])):
+	?>
 	<section id="documentaries">
 		<h3>Documentaries</h3>
 		<div class="wrapper">
@@ -362,6 +388,9 @@
 			  	</section>
 			</div>
 		</section>
+	<?php
+    	endif;
+    ?>
 
 	<!--Partie Footer-->
 	<footer>
@@ -413,5 +442,17 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 	<script src="app.js"></script>
+		<!-- Génère js popup() -->
+		<?php 
+	        if(isset($_SESSION["registered"])){
+		    	echo "<script type='text/javascript'>showPopup();</script>";
+		    	unset($_SESSION);
+		   		session_destroy();
+		    }elseif(isset($_SESSION['errors'])){
+		    	echo "<script type='text/javascript'>showPopupSignup();</script>";
+		    	unset($_SESSION);
+		   		session_destroy();
+		    }
+		?>
 </body>
 </html>	
