@@ -1,4 +1,3 @@
-// LOGIN FORM
 const loginPopup = document.querySelector(".login-popup");
 const close = document.querySelector(".close");
 const button = document.querySelector("#btn");
@@ -48,14 +47,13 @@ function showPopuppassword(){
 closepassword.addEventListener("click",function(){
 	passwordPopup.classList.remove("show-password");
 })
-// navbar transparent to opaque
 $(document).ready(function() {
     $(window).scroll(function() {
         let scrollTop = $(window).scrollTop();
         if (scrollTop > 785) {
-           document.getElementById('container').classList.add('solid-nav');
+           document.getElementById('containerabout').classList.add('solid-nav');
         } else {
-            $('#container').removeClass('solid-nav');
+            $('#containerabout').removeClass('solid-nav');
         }
     });
 });
