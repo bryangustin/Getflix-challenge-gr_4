@@ -1,6 +1,12 @@
 <?php
-
 session_start();
+
+function str_random($length){
+	$char="0123456789azertyuiopmlkjhgfdsqwxcvbnAZERTYUIOPMLKJHGFDSQWXCVBN";
+	return substr(str_shuffle(str_repeat($char,$length)),0,$length);
+}
+
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -14,40 +20,45 @@ if (isset($_POST['email']) && isset($_POST['password-1']) && isset($_POST['passw
 	$user = $req->fetch();
 	// email deja existant?
 	if ($user){
-		$errors[]="Email already exists!";
+		$errors[]="This email already registered";
 	}
 	// password contient + de 8 caractères
 	if (strlen($_POST['password-1']) <= 8){
-		$errors[]="too short bitch!";
+		$errors[]="The password is too short";
 	}
 	// Password avec une majuscule
 	if (!preg_match("~[A-Z]~", $_POST['password-1'])){
-		$errors[]=" add a CAPITAL please!";
+		$errors[]="The password must contain at least one uppercase letter";
 	}
 	// PASSWORD1 identique à PASSWORD2
 	if ($_POST['password-1'] != $_POST['password-2']){
-		$errors[]="not the same password";
+		$errors[]="The passwords don't match";
 	}
 	// verifie les caracteres intrusif de l email correct
 	$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 	if (!$email){
-		$errors[]="Your email is not valid";
+		$errors[]="Please enter a valid email";
 	}else{ // Vérifie que la structure de l email est correct
 		$email=filter_var($email, FILTER_VALIDATE_EMAIL);
 		if (!$email){
-			$errors[]="Your email is not valid";
+			$errors[]="Please enter a valid email";
 		}
 	}
 	// si pas d'erreurs execute DB
 	if (empty($errors)){
 		$email=$_POST['email'];
 		$password= password_hash($_POST['password-1'], PASSWORD_DEFAULT);
-		$sth=$pdo->prepare("INSERT INTO A_users (A_U_email, A_U_password_1) VALUES(?,?)");
-		$sth->execute([$email,$password]);
+		$token = str_random(60);
+		$id=$pdo->lastInsertID();
+		$sth=$pdo->prepare("INSERT INTO A_users (A_U_email, A_U_password_1, A_U_conf_token) VALUES(?,?,?)");
+		$sth->execute([$email,$password,$token]);
+
+		mail($email,"Registration confirmation Life report", "clique sur le lien suivant pour confirmer ton inscription: \n\n http://localhost:8888/index.php?id=$id&token=$token");
+
 		$_SESSION['registered']=$email;
 	}
 	// array erreurs accessible via la $_SESSION[''] dans l'index.php
-	$_SESSION['errors']=$errors;
+	$_SESSION['errors_signup']=$errors;
 	header('location: index.php');
 }
 
@@ -55,25 +66,50 @@ if (isset($_POST['email']) && isset($_POST['password-1']) && isset($_POST['passw
 if(isset($_POST['email-login'])&& isset($_POST['password-login'])){
 	$email_login=$_POST['email-login'];
 	$password_login=$_POST['password-login'];
-	// récupère le password_hash pour le comparer plus tard avec une fonction 
-	// bug sql hash password a revoir !!!
-	$req_login = $pdo->prepare("SELECT A_U_password_1 FROM A_users WHERE A_U_email=?");
-	$req_login->execute(['$email_login']);
-	$password_verified = $req_login->fetch();
-
-	      if(password_verify($password_login,$password_verified)){
+	try{
+	    $query = "SELECT A_U_password_1 FROM A_users WHERE A_U_email='$email_login'";
+	    $data = $pdo->query($query);
+	    $data = $data->fetch();
+	    
+	    foreach ($data as $value) {
+	        $cryptpassword= $value;
+	        break;
+	    }
+	}
+	catch(PDOException $error){
+	    $error->getMessage();
+	}
+	if(password_verify($password_login,$cryptpassword)){
 	        $_SESSION['connected'] = $email_login;
 	        $_SESSION['success'] = "You are now logged in";
-	        header('location: index.php');
+	        
+	}else{
+		$_SESSION['errors_login']="la combinaison n'est pas bonne!";
 	}
-		var_dump($password_verified);
+	header('location: index.php');
 }
+//CONFIRMATION mail
+
+	// if (isset($_SESSION['id']) && isset($_SESSION['token']){
+	// 	try{
+	// 	    $query = "SELECT A_U_id FROM A_users";
+	// 	    $data = $pdo->query($query);
+	// 	    foreach ($data as $value) {
+	// 	        $cryptpassword= $value[0];
+	// 	        break;
+	// 	    }
+	// 	}
+	// 	catch(PDOException $error){
+	// 	    $error->getMessage();
+	// 	}
+
+	// }
 ?>
 
 
 
 <?php
-// FORMULAIRE DE CONTACT
+
 $VotreAdresseMail="celine.arnould33@gmail.com";
 
 if(isset($_POST['submit'])) { // si le bouton "Envoyer" est appuyé
