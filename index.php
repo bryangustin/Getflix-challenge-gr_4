@@ -409,7 +409,7 @@
 	                            if ($position_arobase === false)
 	                                echo '<p>Votre email doit comporter un @.</p>';
 	                            else {
-	                                $retour = mail('tahari.ines@gmail.com', $_POST['name'] . ' ' . 'vous a envoyé un message depuis la page www.ines-tahari.com' , $_POST['message'], 'From: ' . $_POST['email']);
+	                                $retour = mail('bryan1804.g@gmail.com', $_POST['name'] . ' ' . 'vous a envoyé un message depuis la page www.monarch-light.com' , $_POST['message'], 'From: ' . $_POST['email']);
 	                                if($retour)
 	                                    echo '<p class="send">Votre message a été envoyé.</p>';
 	                                else
