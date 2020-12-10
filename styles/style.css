@@ -5,8 +5,7 @@ Black pearl : #1e272e
 Minty green: #0be881
 Jade dust (bleu): #00d8d6
 Gris (comme du blanc) pour text de base: #d2dae2
-*/
-/*Search bar start*/
+Search bar start*/
 .search{
 	width: 150px;
 	height: 20px;
@@ -451,16 +450,6 @@ Gris (comme du blanc) pour text de base: #d2dae2
 /* end of FORGOT PASSWORD*/
 
 /* BIOGRAPHY */
-#containerabout{
-	background-image: url("../images/about.jpg");
-	height: 850px;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100%;
-	background-position: 0% 0%;
-	box-shadow:inset 0px -10px 20px 40px lightgrey;
-
-}
 #biography{
 	width: 1000px;
 	margin:0px auto;
@@ -480,8 +469,6 @@ Gris (comme du blanc) pour text de base: #d2dae2
 	text-transform: uppercase;
 }
 #biography p{
-	width: 800px;
-	padding-left: 100px;
 	font-weight: lighter;
 	margin: 30px 0;
 	font-size: 18px;
@@ -510,7 +497,15 @@ section {
 }
 
 /*HEADER*/
-
+#containerabout{
+	background-image: url("../images/about.jpg");
+	height: 850px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-position: 0% 0%;
+	box-shadow: -1px 2px 10px 3px rgba(211, 211, 211, 0.3) inset;
+}
 #container{
 	background-image: url("../images/david1.jpg");
 	height: 850px;
@@ -533,9 +528,6 @@ section {
 	background-repeat: no-repeat;
 	z-index: 10;
 }
-
-
-
 #signature{
 	background-image: url("../images/signature-david.png");
 	background-size: 116%;
@@ -572,12 +564,10 @@ section {
 	margin:0;
 	width: 100%;
 }
-
 .li_header{
 	list-style-type: none;
 	padding: 20px;
 }
-
 .a_header{	
 	font-size: 14px;
 	color:white;
@@ -585,12 +575,10 @@ section {
 	text-transform: uppercase;
 
 }
-
 .a_header:hover{
 	color: grey;
 	text-decoration: none;
 }
-
 /*FIN HEADER*/
 
 
