@@ -109,7 +109,7 @@ if(isset($_POST['email-login'])&& isset($_POST['password-login'])){
 
 
 <?php
-
+// FORMULAIRE DE CONTACT
 $VotreAdresseMail="celine.arnould33@gmail.com";
 
 if(isset($_POST['submit'])) { // si le bouton "Envoyer" est appuyé
@@ -152,6 +152,4 @@ if(isset($_POST['submit'])) { // si le bouton "Envoyer" est appuyé
         }
     }
 }
-
 ?>
-

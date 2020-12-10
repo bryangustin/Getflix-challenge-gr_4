@@ -367,8 +367,8 @@
 	<div class="line"></div>
 	<footer class="desk">
 	    <div id="ancre_Contact" class="contacth1"><h1><span class="orange"><i class="fas fa-envelope"></i></span> Contact</h1></div>
-	    <!-- FORMULAIRE -->
-	    <form name="myForm" action="#ancre_Contact" onsubmit="return validateForm()" method="post">
+	    <!-- FORMULAIRE --> 
+	    <form name="myForm" action="#ancre_Contact" method="post">
 	        <table class="form-style">
 	            <tr>
 	                <td>
@@ -384,7 +384,7 @@
 	                    <label>Email</label>
 	                </td>
 	                <td>
-	                    <input type="email" name="email" class="long" required/>
+	                    <input type="email" name="mail" class="long" required/>
 	                    <span class="error" id="erroremail"></span>
 	                </td>
 	            </tr>
@@ -400,23 +400,56 @@
 	            <tr>
 	                <td></td>
 	                <td>
-	                    <input type="submit" value="Submit">      
+                    
+	                    <input type="submit" name="submit" value="Submit">      
 	                    <input type="reset" value="Reset">
-	                    <!-- PHP -->
 	                    <?php
-	                        if (isset($_POST['message'])) {
-	                            $position_arobase = strpos($_POST['email'], '@');
-	                            if ($position_arobase === false)
-	                                echo '<p>Votre email doit comporter un @.</p>';
-	                            else {
-	                                $retour = mail('bryan1804.g@gmail.com', $_POST['name'] . ' ' . 'vous a envoyé un message depuis la page www.monarch-light.com' , $_POST['message'], 'From: ' . $_POST['email']);
-	                                if($retour)
-	                                    echo '<p class="send">Votre message a été envoyé.</p>';
-	                                else
-	                                    echo '<p>Erreur.</p>';
+	                    // FORMULAIRE DE CONTACT
+	                    $VotreAdresseMail="celine.arnould33@gmail.com";
+
+	                    if(isset($_POST['submit'])) { // si le bouton "Envoyer" est appuyé
+	                        //on vérifie que le champ mail est correctement rempli
+	                        if(empty($_POST['mail'])) {
+	                            echo "Please enter your email";
+	                        } else {
+	                            //on vérifie que l'adresse est correcte
+	                            if(!preg_match("#^[a-z0-9_-]+((\.[a-z0-9_-]+){1,})?@[a-z0-9_-]+((\.[a-z0-9_-]+){1,})?\.[a-z]{2,}$#i",$_POST['mail'])){
+	                                echo "Your email is incorrect";
+	                            }else{
+	                                //on vérifie que le champ sujet est correctement rempli
+	                                if(empty($_POST['name'])) {
+	                                    echo "Please enter your name";
+	                                }else{
+	                                    //on vérifie que le champ message n'est pas vide
+	                                    if(empty($_POST['message'])) {
+	                                        echo "Please enter a message";
+	                                    }else{ 
+	                                        //tout est correctement renseigné, on envoi le mail
+	                                        //on renseigne les entêtes de la fonction mail de PHP
+	                                        $Entetes = "MIME-Version: 1.0\r\n";
+	                                        $Entetes .= "Content-type: text/html; charset=UTF-8\r\n";
+	                                        $Mail=$_POST['mail']; 
+	                                        $Entetes .= "From: Life Report <".$Mail.">\r\n";//de préférence une adresse avec le même domaine de là où, vous utilisez ce code, cela permet un envoie quasi certain jusqu'au destinataire
+	                                        $Entetes .= "Reply-To: Life Report <".$Mail.">\r\n";
+	                                        //on prépare les champs:
+	                                
+	                                        $Name='=?UTF-8?B?'.base64_encode($_POST['name']).'?=';//Cet encodage (base64_encode) est fait pour permettre aux informations binaires d'être manipulées par les systèmes qui ne gèrent pas correctement les 8 bits (=?UTF-8?B? est une norme afin de transmettre correctement les caractères de la chaine)
+	                                        $Message=htmlentities($_POST['message'],ENT_QUOTES,"UTF-8");//htmlentities() converti tous les accents en entités HTML, ENT_QUOTES Convertit en + les guillemets doubles et les guillemets simples, en entités HTML
+
+	                                        //en fin, on envoi le mail
+	                                        if(mail($VotreAdresseMail,$Name,nl2br($Message),$Entetes)){//la fonction nl2br permet de conserver les sauts de ligne et la fonction base64_encode de conserver les accents dans le titre
+	                                            echo "<br>The email has been sent!";
+	                                        } else {
+	                                            echo "<br>An error occurred, the email hasn't been sent";
+	                                        }
+	                                    }
+	                                }
 	                            }
 	                        }
+	                    }
+
 	                    ?>
+	                    
 	                </td>
 	            </tr>
 	        </table>
