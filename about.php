@@ -101,8 +101,7 @@
 			<nav id="navbar">
 				<ul id="ul_header_nav">
 					<li class="li_header first"><a class="a_header" href="index.php">Home</a></li>
-					<li class="li_header"><a class="a_header" href="">Comment</a></li>
-					<li class="li_header"><a class="a_header" href="">Contact</a></li>
+					<li class="li_header"><a class="a_header" href="#ancre_Contact">Contact</a></li>
 				</ul>
 				<ul id="ul_header">
 						<li class="li_header"><button class="srchbtn" type="submit"><i class="fa fa-search"></i></button> <input class="search" type="text" placeholder=" Search.."></li>

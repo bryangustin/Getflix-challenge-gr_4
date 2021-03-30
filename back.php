@@ -6,7 +6,6 @@ function str_random($length){
 	return substr(str_shuffle(str_repeat($char,$length)),0,$length);
 }
 
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
