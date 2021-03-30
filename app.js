@@ -14,7 +14,7 @@ function showPopup(){
 }
 close.addEventListener("click",function(){
 	loginPopup.classList.remove("show");
-})
+});
 
 // SIGNUP FORM
 const signupPopup = document.querySelector(".signup-popup");
@@ -53,7 +53,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
         let scrollTop = $(window).scrollTop();
         if (scrollTop > 785) {
-           document.getElementById('container').classList.add('solid-nav');
+            document.getElementById('container').classList.add('solid-nav');
         } else {
             $('#container').removeClass('solid-nav');
         }

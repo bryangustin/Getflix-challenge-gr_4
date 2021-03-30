@@ -51,7 +51,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
         let scrollTop = $(window).scrollTop();
         if (scrollTop > 785) {
-           document.getElementById('containerabout').classList.add('solid-nav');
+            document.getElementById('containerabout').classList.add('solid-nav');
         } else {
             $('#containerabout').removeClass('solid-nav');
         }

@@ -30,8 +30,8 @@
 
 <body>
 	
-	 <!-- Login form -->
-	 <div class="login-popup">
+	<!-- Login form -->
+	<div class="login-popup">
         <div class="box">
             <div class="img-area">
                 <div class="img"></div>
@@ -118,8 +118,7 @@
 				<ul id="ul_header_nav">
 					<li class="li_header first"><a class="a_header" href="">Home</a></li>
 					<li class="li_header"><a class="a_header" href="about.php">About</a></li>
-					<li class="li_header"><a class="a_header" href="">Comment</a></li>
-					<li class="li_header"><a class="a_header" href="">Contact</a></li>
+					<li class="li_header"><a class="a_header" href="#ancre_Contact">Contact</a></li>
 				</ul>
 				<ul id="ul_header">
 						<li class="li_header"><button class="srchbtn" type="submit"><i class="fa fa-search"></i></button> <input class="search" type="text" placeholder=" Search.."></li>
@@ -147,50 +146,18 @@
 			<section id="section1">
 		    	<a href="#section3" class="arrow__btn" id="arrow1">‹</a>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=IlFRPkT-hVc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=aETNYyrqNYE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=JWI1eCbksdE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=vPF2Jd4VczE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 		   		<a href="#section2" class="arrow__btn" id="arrow1">›</a>
-		  	</section>
-		  	<section id="section2">
-		    	<a href="#section1" class="arrow__btn">‹</a>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=z6u8KWyfrNU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=kAphgHhlteM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=79c7gqHYo9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=c8aFcHFu8QM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-		    	<a href="#section3" class="arrow__btn" id="arrow1">›</a>
-		  	</section>
-		  	<section id="section3">
-		    	<a href="#section2" class="arrow__btn" id="arrow1">‹</a>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=IDkbkvOFxng" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=33-3UCTRZWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=6TpLF5FXQ8w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=1UHtF1fnJMs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-		   		<a href="#section1" class="arrow__btn" id="arrow1">›</a>
 		  	</section>
 		</div>
 	</section>	
@@ -202,50 +169,18 @@
 				<section id="sectionTwo1">
 			    	<a href="#sectionTwo3" class="arrow__btn" id="arrow2">‹</a>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=mRwSC5eHQzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=P0pHrltKF0U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=Lc9QqSa6W7w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=y9s9bOyVyEk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 			   		<a href="#sectionTwo2" class="arrow__btn" id="arrow2">›</a>
-			  	</section>
-			  	<section id="sectionTwo2">
-			    	<a href="#sectionTwo1" class="arrow__btn" id="arrow2">‹</a>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=jtOamrNv58M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=F37SaAT_7kA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=GrjGmZvhKE4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=7kklWC-KAJY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-			    	<a href="#sectionTwo3" class="arrow__btn" id="arrow2">›</a>
-			  	</section>
-			  	<section id="sectionTwo3">
-			    	<a href="#sectionTwo2" class="arrow__btn" id="arrow2">‹</a>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=pDUkoIo1wvY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=EBrY8tjHrs4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=QfAzYIp_ny4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=kDmcxisClX4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-			   		<a href="#sectionTwo1" class="arrow__btn" id="arrow2">›</a>
 			  	</section>
 			</div>
 		</section>	
@@ -257,50 +192,18 @@
 			<section id="sectionThree1">
 		    	<a href="#sectionThree3" class="arrow__btn" id="arrow3">‹</a>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=Cq1oFhTINXE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=HK47Pnx46rM&t=1s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=ahby8VoMG-o&list=PLB1F251E81DE15E9B" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=ahby8VoMG-o&list=PLB1F251E81DE15E9B" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 		   		<a href="#sectionThree2" class="arrow__btn" id="arrow3">›</a>
-		  	</section>
-		  	<section id="sectionThree2">
-		    	<a href="#sectionThree1" class="arrow__btn" id="arrow3">‹</a>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=-fBg8XcCcc8&list=PL50KW6aT4Ugx9IQrG-Z0r--2W46TP1q0g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=Y1Qir3NuOcw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=czgc56Vfz4w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=IlFRPkT-hVc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-		    	<a href="#sectionThree3" class="arrow__btn" id="arrow3">›</a>
-		  	</section>
-		  	<section id="sectionThree3">
-		    	<a href="#sectionThree2" class="arrow__btn" id="arrow3">‹</a>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=aETNYyrqNYE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=JWI1eCbksdE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=vPF2Jd4VczE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=z6u8KWyfrNU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-		   		<a href="#sectionThree1" class="arrow__btn" id="arrow3">›</a>
 		  	</section>
 		</div>
 	</section>	
@@ -312,57 +215,24 @@
 				<section id="sectionFour1">
 			    	<a href="#sectionFour3" class="arrow__btn" id="arrow4">‹</a>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=kAphgHhlteM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=79c7gqHYo9E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=mRwSC5eHQzA&list=PLJ2bAFAEG-mMMQIcNiY6w9Bge1ZZ-MviS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=mRwSC5eHQzA&list=PLJ2bAFAEG-mMMQIcNiY6w9Bge1ZZ-MviS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=NC3IOpr0CuQ&list=PLyXZndcjAsKnQz9PY7db7L1T5hCDpJcO_" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				    	<iframe src="https://www.youtube.com/embed?v=BOkXOFy7ubA&list=PL50KW6aT4UgyQejijfgDBDzbHL25NVjNw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				  	</div>
 			   		<a href="#sectionFour2" class="arrow__btn" id="arrow4">›</a>
-			  	</section>
-			  	<section id="sectionFour2">
-			    	<a href="#section1" class="arrow__btn" id="arrow4">‹</a>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=c8aFcHFu8QM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=IDkbkvOFxng" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=33-3UCTRZWM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=6TpLF5FXQ8w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-			    	<a href="#sectionFour3" class="arrow__btn" id="arrow4">›</a>
-			  	</section>
-			  	<section id="sectionFour3">
-			    	<a href="#sectionFour2" class="arrow__btn"id="arrow4">‹</a>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=1UHtF1fnJMs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=mRwSC5eHQzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=P0pHrltKF0U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-				    <div class="item">
-				    	<iframe src="https://www.youtube.com/watch?v=Lc9QqSa6W7w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				  	</div>
-			   		<a href="#sectionFour1" class="arrow__btn" id="arrow4">›</a>
 			  	</section>
 			</div>
 		</section>
 	<?php
     	endif;
     ?>
-
 	<!--Partie Footer-->
 	<div class="line"></div>
 	<footer class="desk">
