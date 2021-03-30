@@ -1,15 +1,3 @@
-<?php session_start();
-	if (isset($_GET['disconnect'])){
-		unset($_GET);
-		session_destroy();
-		header('location: index.php');
-	}
-	if (isset($_GET['id']) && isset($_GET['token'])){
-		$_SESSION['id_mail']=$_GET['id'];
-		$_SESSION['token_mail']=$_GET['token'];
-		header('location: back.php');
-	}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,11 +67,7 @@
                     <div class="form-group">
                         <input type="password" name="password-2" placeholder="Password confirmation" class="form-control" required>
                         <!-- Affichage des erreurs en dessous du password2 -->
-                        <?php if(isset($_SESSION['errors_signup'])) : ?>
-                        	<?php foreach ($_SESSION['errors_signup'] as $value): ?> 
-                        		<p style="color: red;"> <?php echo $value; ?> </p>
-                        	<?php endforeach ?> 
-                        <?php endif ?>
+                        
                     </div>
                     <button type="submit" class="btn-create-signup" >Sign Up</button>
                     	
@@ -123,13 +107,7 @@
 				<ul id="ul_header">
 						<li class="li_header"><button class="srchbtn" type="submit"><i class="fa fa-search"></i></button> <input class="search" type="text" placeholder=" Search.."></li>
 						<!-- Affichage login ou logout -->
-						<?php if(!isset($_SESSION['connected'])) :?>
-							<li class="li_header"><a class="a_header" id="btn" href="">
-							Log in
-						<?php else : ?>
-							<li class="li_header"><a class="a_header" href="index.php?disconnect=true">
-							Log out
-						<?php endif ?>
+						
 					</a></li>		
 				</ul>
 			</nav>
@@ -137,9 +115,7 @@
 	</header>
 	<!--Caroussel 1: catégorie documentaries-->
 	<!-- Affichage si logger -->
-	<?php
-		if(isset($_SESSION['connected'])):
-	?>
+	
 	<section id="documentaries">
 		<h3>Documentaries</h3>
 		<div class="wrapper">
@@ -230,9 +206,7 @@
 			  	</section>
 			</div>
 		</section>
-	<?php
-    	endif;
-    ?>
+	
 	<!--Partie Footer-->
 	<div class="line"></div>
 	<footer class="desk">
@@ -335,16 +309,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 	<script src="app.js"></script>
 		<!-- Génère js popup() -->
-		<?php 
-	        if(isset($_SESSION["registered"]) || isset($_SESSION["errors_login"])){
-		    	echo "<script type='text/javascript'>showPopup();</script>";
-		    	unset($_SESSION);
-		   		session_destroy();
-		    }elseif(isset($_SESSION['errors_signup'])){
-		    	echo "<script type='text/javascript'>showPopupSignup();</script>";
-		    	unset($_SESSION);
-		   		session_destroy();
-		    }
-		?>
+		
 </body>
 </html>	
